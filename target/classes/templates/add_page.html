@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xml:th="http://www.thymeleaf.orf" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form th:action="@{/addArticle}" th:object="${article}" method="post">
+    题目：<input type="text" th:field="*{title}"/>
+    <br>
+    描述：<input type="text" th:field="*{description}"/>
+    <br>
+    正文：<input type="text" th:field="*{content}"/>
+    <br>
+    <input type="submit"/>
+</form>
+</body>
+</html>
+</html>

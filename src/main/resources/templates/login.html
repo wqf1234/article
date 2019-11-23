@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xml:th="http://www.thymeleaf.orf" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form th:action="@{/loginFun}" th:object="${user}" method="post">
+    <table align="center">
+    <h1>登录</h1>
+    用户名ID：<input type="number" th:field="*{id}"/>
+    <br>
+    密码：<input type="password" th:field="*{password}"/>
+    <br>
+    <input type="submit"/>
+</form>
+
+</body>
+</html>

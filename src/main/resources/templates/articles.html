@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xml:th="http://www.thymeleaf.orf" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<table border="1">
+    <th>id</th>
+    <th>title</th>
+    <th>description</th>
+    <th>content</th>
+    <th colspan="2">操作</th>
+    <tr th:each="article : ${articles}">
+        <td><a th:href="@{'/articles/' + ${article.id}}" th:text="'文章' + ${article.id}">id</a></td>
+        <td th:text="${article.title}">title</td>
+        <td th:text="${article.description}">description</td>
+        <td th:text="${article.content}">content</td>
+        <td><a th:href="@{'/deleteArticle/' + ${article.id}}">删除</a></td>
+        <td><a th:href="@{'/update/' + ${article.id}}">修改</a></td>
+    </tr>
+</table>
+</body>
+</html>
+</html>

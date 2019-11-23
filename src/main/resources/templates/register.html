@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xml:th="http://www.thymeleaf.orf" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form th:action="@{/registerUser}" th:object="${user}" method="post">
+<h1>用户注册</h1>
+    Id：<input type="int" th:field="*{id}"/>
+    <br>
+    密码：<input type="String" th:field="*{password}"/>
+    <br>
+    <input type="submit"/>
+</form>
+</body>
+</html>
